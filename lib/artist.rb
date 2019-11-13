@@ -9,11 +9,7 @@ class Artist
     @name = name
     @songs = []
   end
-  
-  def self.add_song(song)
-    @songs << song
-  end 
-  
+
   def add_song(song)
     @songs << song
     # song.artist = self
@@ -34,13 +30,8 @@ class Artist
   def self.create_by_name(name)
     new_artist = Artist.new(name)
     @@all << new_artist 
+    binding.pry 
     new_artist
-    # @@all << self 
-    # @@all << self 
-    # name.save
-    # new_artist.save
-    
-   
   end 
     
   def self.find_by_name(name)
